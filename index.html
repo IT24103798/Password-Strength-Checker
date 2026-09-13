@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Password Strength Checker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-effects">
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+</div>
+
+<main class="app-container">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="logo">
+            🔐
+        </div>
+
+        <h1>Password Strength Checker</h1>
+
+        <p>
+            Analyze your password and learn how to make it stronger.
+        </p>
+
+    </header>
+
+
+    <!-- Password -->
+
+    <section class="password-section">
+
+        <label for="password">
+            Enter Password
+        </label>
+
+        <div class="password-input-container">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Type your password..."
+                autocomplete="new-password"
+            >
+
+            <button
+                id="togglePassword"
+                class="icon-button"
+                type="button"
+                title="Show password"
+            >
+                👁
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Strength -->
+
+    <section class="strength-section">
+
+        <div class="strength-header">
+
+            <span>Password Strength</span>
+
+            <span
+                id="strengthText"
+                class="strength-text"
+            >
+                Not Checked
+            </span>
+
+        </div>
+
+
+        <div class="strength-bar">
+
+            <div
+                id="strengthFill"
+                class="strength-fill"
+            ></div>
+
+        </div>
+
+
+        <div class="score-container">
+
+            <span>
+                Security Score
+            </span>
+
+            <strong id="scoreText">
+                0 / 5
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- Requirements -->
+
+    <section class="requirements-card">
+
+        <h2>
+            Password Requirements
+        </h2>
+
+
+        <div
+            class="requirement"
+            id="lengthRequirement"
+        >
+
+            <span class="status-icon">✕</span>
+
+            <span>
+                At least 8 characters
+            </span>
+
+        </div>
+
+
+        <div
+            class="requirement"
+            id="uppercaseRequirement"
+        >
+
+            <span class="status-icon">✕</span>
+
+            <span>
+                At least one uppercase letter
+            </span>
+
+        </div>
+
+
+        <div
+            class="requirement"
+            id="lowercaseRequirement"
+        >
+
+            <span class="status-icon">✕</span>
+
+            <span>
+                At least one lowercase letter
+            </span>
+
+        </div>
+
+
+        <div
+            class="requirement"
+            id="numberRequirement"
+        >
+
+            <span class="status-icon">✕</span>
+
+            <span>
+                At least one number
+            </span>
+
+        </div>
+
+
+        <div
+            class="requirement"
+            id="symbolRequirement"
+        >
+
+            <span class="status-icon">✕</span>
+
+            <span>
+                At least one special character
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- Warning -->
+
+    <div
+        id="warningBox"
+        class="warning-box hidden"
+    >
+
+        ⚠️
+
+        <span id="warningText"></span>
+
+    </div>
+
+
+    <!-- Security recommendation -->
+
+    <section class="tip-card">
+
+        <div class="tip-icon">
+            💡
+        </div>
+
+        <div>
+
+            <h3>
+                Security Recommendation
+            </h3>
+
+            <p id="suggestionText">
+                Enter a password to receive security recommendations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Buttons -->
+
+    <div class="button-group">
+
+        <button
+            id="checkButton"
+            class="primary-button"
+        >
+            🔍 Check Password
+        </button>
+
+
+        <button
+            id="clearButton"
+            class="secondary-button"
+        >
+            Clear
+        </button>
+
+    </div>
+
+
+    <!-- Privacy -->
+
+    <div class="privacy-message">
+
+        <span>🔒</span>
+
+        <p>
+            Your password is analyzed locally in your browser.
+            It is not stored or sent to a server.
+        </p>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            Cyber Security Project 1 | Password Strength Checker
+        </p>
+
+        <span>
+            DecodeLabs Industrial Training 2026
+        </span>
+
+    </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
